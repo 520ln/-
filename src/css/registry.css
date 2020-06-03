@@ -1,0 +1,11 @@
+#header{
+    height: 35px;
+    background: #333333;
+    display: block;
+}
+.navi{
+    /* overflow: hidden; */
+    height: 35px;
+    float: left;
+    display: block;
+}

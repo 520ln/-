@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <img class="logoImg" src='https://cdn.chiq-cloud.com/passport/pc/image/logo.jpg'>
+        <div class="spaceLine"></div>
+        <div class="tpc">通行证</div>
+    </div>
+    <!-- 登录框整体 -->
+    <div class="content">
+        <!-- 登录框头部 -->
+        <div class="content-naviget">
+            <div id="navtab1" class="tab" class="active">账号密码登录</div>
+            <div id="navtab2" class="tab">手机短信登录</div>
+            <div class="gezi"></div>
+        </div>
+        <!-- 输入框整体 -->
+        <div id="Box">
+            <!-- 输入框1 -->
+            <div id="item" class="inputone">
+                <img class="login_icon_img" src="https://cdn.chiq-cloud.com/passport/pc/image/login_ico1.png">
+                <input type="text" name="" id="phone" placeholder="手机号码" class="loginInput" maxlength="11">
+            </div>
+            <!-- 输入框2 -->
+            <div id="item" class="inputtwo">
+                <img class="login_icon_img" src="https://cdn.chiq-cloud.com/passport/pc/image/login_ico3.png">
+                <input type="text" id="" class="loginInput" placeholder="手机/邮箱/用户名" maxlength="30">
+            </div>
+
+            <!-- 输入框3 -->
+            <div id="item" class="inputthree">
+                <img class="login_icon_img" src="https://cdn.chiq-cloud.com/passport/pc/image/login_ico2.png">
+                <input id="smsCode" class="loginInput verifiCodeInput" placeholder="短信验证码" maxlength="6">
+            </div>
+            <!-- 输入框4 -->
+            <div id="item" class="inputfour">
+                <img class="login_icon_img" src="https://cdn.chiq-cloud.com/passport/pc/image/login_ico4.png">
+                <input id="password" class="loginInput" type="password" placeholder="密码">
+            </div>
+
+            <div class="loginBtnTopDiv">
+                <button class="loginBtn" o id="account-login">登录</button>
+            </div>
+            <div class="registerTopDiv">
+                <button class="forgetBtn">忘记密码</button>
+                <button class="registerBtn">注册</button>
+            </div>
+
+        </div>
+        <div class="otherLoginTopDiv">
+            <div class="leftSpaceLineDiv"></div>
+            <div class="otherLoginDescriptDiv">其他登录方式</div>
+            <div class="rightSpaceLineDiv"></div>
+        </div>
+        <div class="otherLoginMethodDiv">
+            <a target="_top"
+                href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101347331&redirect_uri=https%3a%2f%2fpassport.changhong.com%2fredirect.do%3fenvironment%3dproduct%26livemode%3d1%26service%3dhttps://cn.changhong.com/%26source%3dqq">
+                <img src="https://cdn.chiq-cloud.com/passport/pc/image/QQ.png" alt="">
+            </a> <a target="_top"
+                href="https://open.weixin.qq.com/connect/qrconnect?appid=wxb21ab427f39e3633&redirect_uri=https://passport.changhong.com/redirect.do?environment=product%26livemode=1%26service=https://cn.changhong.com/%26source%3dweChat&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect">
+                <img src="https://cdn.chiq-cloud.com/passport/pc/image/weixin.png" alt="">
+            </a> <a target="_top"
+                href="https://api.weibo.com/oauth2/authorize?client_id=3311627057&redirect_uri=https://passport.changhong.com/redirect.do?environment=product%26livemode=1%26service=https://cn.changhong.com/%26source=weibo&response_type=code&state=&scope=all">
+                <img src="https://cdn.chiq-cloud.com/passport/pc/image/weibo.png" alt="">
+            </a> <a target="_top"
+                href="https://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fopenauth.alipay.com%3A443%2Foauth2%2FpublicAppAuthorize.htm%3Fapp_id%3D2017102409491491%26scope%3Dauth_user,auth_base%26redirect_uri%3Dhttps%3a%2f%2fpassport.changhong.com%2fredirect.do%3fenvironment%3dproduct%26livemode%3d1%26service=https://cn.changhong.com/">
+                <img src="https://cdn.chiq-cloud.com/passport/pc/image/pay.png" alt="">
+            </a>
+        </div>
+
+
+    </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script src="thirdplugins/jquery.cookie.js"></script>
+<script src="script/login.js"></script>
+
+</html>
