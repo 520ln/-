@@ -1,11 +1,252 @@
+/* 头部 */
 #header{
     height: 35px;
     background: #333333;
     display: block;
+    /* position: relative; */
 }
-.navi{
+/* 导航左边 */
+#navleft{
     /* overflow: hidden; */
+    width: 580px;
+    height: 35px;
+    font-size: 13px;
+    float: left;
+    /* position: absolute; */
+    display: block;
+    margin-left: 62px;
+}
+#navleft .left_sty{
+    list-style: none;
+    width: 145px;
     height: 35px;
     float: left;
-    display: block;
+    line-height: 35px;
 }
+#navleft .left_sty a{
+    display: block;
+    height: 35px;
+    width: 145px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 35px;
+}
+#navleft li img{
+    vertical-align: middle;
+}
+.left_sty:hover{
+    background: #666;
+}
+.bcakbs:hover{
+    background: #666666;
+}
+
+/* 导航右边 */
+#navright{
+    height: 35px;
+    float: right;
+    display: block;
+    margin-right: 130px;
+}
+#navright .rightsz{
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    display: block;
+    line-height: 35px;
+    float: left;
+}
+#navright .rightsz a{
+    font-size: 12px;
+    color: #ffffff;
+    display: block;
+   
+    float: left;
+} 
+#navright .dlzc span{
+    float: left;
+    color: #ffffff;
+    display: block;
+    padding: 0 20px;
+}
+#navright .dlzc{
+    padding-right: 20px;
+}
+
+
+
+
+
+
+/* logo行 */
+#logohead{
+    background: #ffffff;
+    height: 78px;
+    width: 100%;
+    box-shadow: 0px 3px 3px 0px #e1e1e1;
+    position: relative;
+   
+}
+#logohead .commit{
+    width: 500px;
+    height: 78px;
+}
+#logohead .commit img {
+    display: block;
+    float: left;
+    height: 78px;
+    width: 239px;
+    position: absolute;
+    left: 60px;
+}
+
+#logohead .commit .tile{
+    color: #333333;
+    font-size: 24px;
+    margin-top: 26px;
+    line-height: 26px;
+    height: 26px;
+    margin-left: 320px;
+    border-left: 2px solid rgb(221, 221, 221);
+    padding-left: 15px;
+    position: absolute;
+    float: left;
+}
+
+/* 表单注册主体 */
+#main{
+    width: 500px;
+    margin: 66px auto 0px auto;
+    /* background: orange; */
+}
+ .phonenb,.passnb,.passure,.picnb,.mean{
+    width: 500px;
+    height: 78px;
+    /* margin: 0 auto; */
+    position: relative;
+}
+
+.phonenum,.passnum{
+    height: 38px;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    text-indent: 10px;
+    width: 318px;
+    position: absolute;
+    line-height: 38px;
+    color: #333333;
+    font-size: 12px;
+    left: 80px;
+}
+.same{
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    overflow: hidden;
+    font-size: 14px;
+    color: #000;
+    position: absolute;
+    top: 0px;
+    left: -110px;
+  
+}
+.passnb .zhushi{
+    height: 38px;
+    line-height: 38px;
+    margin-left: 5px;
+    color: #989898;
+    font-size: 14px;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+}
+.picsize,.meansize{
+    height: 38px;
+    width: 170px;
+    border: 1px solid #dedede;
+    text-indent: 10px;
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    left: 80px;
+}
+.picnb img{
+    width: 90px;
+    height: 40px;
+    vertical-align: top;
+    position: absolute;
+    left: 260px;
+}
+.picnb span{
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 360px;
+}
+#main .mean .disu{
+    height: 38px;
+    width: 108px;
+    border: 1px solid #dedede;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+    color: #000;
+    font-size: 13px;
+    position: absolute;
+    left: 260px;
+}
+#main .tixing{
+    height: 20px;
+    width: 320px;
+    font-size: 14px;
+    color: #989898;
+    margin-left: 80px;
+}
+#main .agree{
+    width: 350px;
+    height: 48px;
+    margin-top: 20px;
+    position: relative;
+}
+.agree #checkbox{
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+#main .agree .agreement{
+    width: 350px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    position: absolute;
+    left: 100px;
+}
+#main .zhuce{
+    width: 320px;
+    height: 44px;
+    line-height: 44px;
+    background: #f12020;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 80px;
+}
+#main .denglu{
+    width: 350px;
+    line-height: 16px;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+
+    
+
