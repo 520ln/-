@@ -174,6 +174,7 @@ position: relative;
     color: red;
   }
 
+
   /* 导航隐藏物品 */
   #ycwp{
     height: 229px;
@@ -181,7 +182,6 @@ position: relative;
     border-top: 1px solid #eeeeee;
     position: relative;
     width: 100%;
-    z-index: 100;
     display: none;
   }
   #ycwp .rmtj{
@@ -266,6 +266,300 @@ position: relative;
     background: #eeeeee;
     margin-left: 870px;
   }
+
+  /* 到轮播图这儿了 */
+  #lbtk{
+    width: 100%;
+    height: 500px;
+    display: block;
+    border: none;
+    position: relative;
+    
+  }
+  #lbtk .lbt ul li{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // opacity: 0;
+  }
+  #lbtk .lbt ul li img{
+    width: 100%;
+    height: 500px;
+    display: block;
+  }
+  #lbtk .lbt ol{
+    width: 125px;
+    height: 8px;
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+  }
+  #lbtk .lbt ol li{
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    float: left;
+    margin-left: 17px;
+    background-color:rgb(0, 0, 238);
+    cursor: pointer;
+  }
+  #lbtk .lbt ol .active{
+    background-color:red;
+  }
+#lbtk .llcd{
+  width: 226px;
+  height: 500px;
+  position: absolute;
+  left: 62px;
+}
+#lbtk .llcd ul{
+  width: 226px;
+  height: 480px;
+  position: absolute;
+  background: rgba(0,0,0,.4);
+  padding: 10px 0px;
+}
+#lbtk .llcd ul li a{
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+ 
+}
+#lbtk .llcd ul li:hover{
+  background: red;
+}
+
+.leftcd .lrcd{
+  width: 480px;
+  display: none;
+  position: absolute;
+  left: 288px;
+  background: #fff;
+}
+.leftcd .lrcd .smtk{
+  width: 400px;
+  display: block;
+  margin-left: 40px;
+}
+.leftcd .lrcd .smtk .xk1 {
+  width: 400px;
+  // border-bottom:1px solid #eeeeee;
+  display: block;
+  // position: absolute;
+  
+}
+.leftcd .lrcd .smtk .xk1 ::after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  overflow:hidden;
+  visibility:hidden;
+}
+.leftcd .lrcd .smtk .xk1 .maotu{
+  width: 400px;
+  // height: 70px;
+  display: block;
+}
+.leftcd .lrcd .smtk .xk1 .maotu img{
+  width: 60px;
+  // height: 60px;
+  // float: left;
+  display: block;
+}
+.leftcd .lrcd .smtk .xk1 .maotu p{
+  font-size: 16px;
+  position: absolute;
+  top: 20px;
+  left: 120px;
+}
+.leftcd .lrcd .smtk .xk1 .maotu:hover p{
+  color: red;
+}
+.leftcd .lrcd .smtk .xk1 .xinghao{
+  width: 400px;
+  display: block;
+ 
+}
+.leftcd .lrcd .smtk .xk1 .xinghao a{
+  font-size: 14px;
+  color: #666666;
+  padding: 5px 15px;
+  border-left: 1px solid #e0e0e0;
+  float: left;
+}
+
+.leftcd .lrcd .smtk .xk2 .maotu{
+  width: 400px;
+  display: block;
+  margin-top: 20px;
+}
+.leftcd .lrcd .smtk .xk2 .maotu img{
+  width: 60px;
+  // height: 60px;
+  // float: left;
+  display: block;
+}
+.leftcd .lrcd .smtk .xk2 .maotu p{
+  font-size: 16px;
+  position: absolute;
+  top: 150px;
+  left: 120px;
+}
+.leftcd .lrcd .smtk .xk2 .maotu:hover p{
+  color: red;
+}
+.leftcd .lrcd .smtk .xk2 .xinghao{
+  width: 400px;
+  display: block;
+ 
+}
+.leftcd .lrcd .smtk .xk2 .xinghao a{
+  font-size: 14px;
+  color: #666666;
+  padding: 5px 15px;
+  border-left: 1px solid #e0e0e0;
+  float: left;
+}
+
+
+.leftcd .lrcd .smtk .xk3 .maotu{
+  width: 400px;
+  display: block;
+  margin-top: 70px;
+}
+.leftcd .lrcd .smtk .xk3 .maotu img{
+  width: 60px;
+  // height: 60px;
+  // float: left;
+  display: block;
+}
+.leftcd .lrcd .smtk .xk3 .maotu p{
+  font-size: 16px;
+  position: absolute;
+  top: 280px;
+  left: 120px;
+}
+.leftcd .lrcd .smtk .xk3 .maotu:hover p{
+  color: red;
+}
+.leftcd .lrcd .smtk .xk3 .xinghao{
+  width: 400px;
+  display: block;
+ 
+}
+.leftcd .lrcd .smtk .xk3 .xinghao a{
+  font-size: 14px;
+  color: #666666;
+  padding: 5px 15px;
+  border-left: 1px solid #e0e0e0;
+  float: left;
+}
+
+
+#ggk {
+  width: 1226px;
+  height: 200px;
+  // background: pink;
+  display: block;
+  margin: 0 auto;
+}
+#ggk .xlb{
+  height: 40px;
+  width: 100%;
+  display: block;
+}
+#ggk .xlb .radio{
+  width: 36px;
+  height: 40px;
+  display: block;
+  padding-left: 0;
+  float: left;
+}
+#ggk .xlb p{
+  // width: 38px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  display: block;
+  color: #333333;
+  float: left;
+  margin-left: 20px;
+}
+
+#ggk .sfg{
+  // position: relative;
+  width: 1226px;
+  height: 160px;
+  
+}
+#ggk .sfg .shtj{
+  width: 226px;
+  // height: 160px;
+  display: block;
+  border: none;
+  float: left;
+  margin-right: 13px;
+ 
+}
+#ggk .sfg .shtj a{
+  width: 50%;
+  height: 80px;
+  text-align: center;
+  line-height: 1;
+  font-size: 14px;
+  color: #ffffff;
+  float: left;
+  display: block;
+  background: rgb(102, 102, 102);
+
+}
+#ggk .sfg .shtj .sifangg img{
+  display: block;
+  margin: 0 auto;
+  padding:15px 0 15px;
+  border: 0;
+}
+#ggk .sfg .shtj .sifangg span{
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#ggk .sfg .sange{
+  width: 320px;
+  height: 160px;
+  display: block;
+  float: left;
+  margin-right: 13px;
+  font-size: 0;
+  overflow: hidden;
+}
+#ggk .sfg .lastc{
+  margin-right: 0;
+}
+
+
+
+
+
+
+#jutiye{
+  width: 1226px;
+  height: 715px;
+  background: orangered;
+  display: block;
+  margin: 40px auto;
+}
+
+  
 
   
 
