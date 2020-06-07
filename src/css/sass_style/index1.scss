@@ -462,7 +462,9 @@ position: relative;
   float: left;
 }
 
-
+.backgroundcpcp{
+  background: #f9f9f9;
+}
 #ggk {
   width: 1226px;
   height: 200px;
@@ -550,16 +552,161 @@ position: relative;
 
 
 
-
+// 具体页
 #jutiye{
+  
   width: 1226px;
   height: 715px;
-  background: orangered;
+  // background: #a9a9a9;
   display: block;
+  // padding-top: 30px;
   margin: 40px auto;
+  position: relative;
+}
+#jutiye .leftk{
+  width: 226px;
+  height: 675px;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+#jutiye .leftk .dscp{
+  width: 226px;
+  height: 30px;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+// 电视产品
+#jutiye .leftk .dscp p{
+  padding-left: 13px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 25px;
+  text-align: center;
+  height: 25px;
+  float: left;
+  border-left: 4px solid red;
+}
+#jutiye .leftk .dscp a{
+  font-size: 14px;
+  float: right;
+  margin-right: 5px;
+  color: #3a6de4;
+  line-height: 30px;
 }
 
-  
+#jutiye .leftk .dds{
+  width: 226px;
+  height: 630px;
+  position: absolute;
+  display: block;
+  top: 45px;
+  left: 0;
+}
 
+#jutiye .rightk {
+  width: 1000px;
+  height: 685px;
+  // background: #759dfc;
+  position: absolute;
+  display: block;
+  left: 226px;
+  top: 0;
+}
+#jutiye .rightk .dsxl{
+  width: 1000px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  // left: 226px;
+  // background: greenyellow;
+}
+#jutiye .rightk .dsxl ul{
+  overflow: hidden;
+  float: right;
+  margin-right: 8px;
   
+}
+#jutiye .rightk .dsxl ul li{
+  float: left;
+  margin-left: 33px;
+  line-height: 25px;
+  height: 25px;
+  font-size: 14px;
+  color: #333333;
+}
+#jutiye .rightk .xqb{
+  width: 1000px;
+  height: 640px;
+  // background: red;
+  display: block;
+  position: absolute;
+  top: 45px;
+}
+#jutiye .rightk .xqb ul{
+  overflow: hidden;
+  height: 640px;
+}
+#jutiye .rightk .xqb ul li{
+  width: 190px;
+  height: 260px;
+  position: relative;
+  // position: absolute;
+  margin-bottom: 10px;
+  display: block;
+  padding: 25px;
+  float: left;
+  margin-left: 8px;
+  text-align: center;
+  background: white;
+  margin-top: 2px;
+}
+#jutiye .rightk .xqb ul li:hover{
+  box-shadow: 0px 0px 3px 3px #efefef;
+}
+#jutiye .rightk .xqb ul li>a{
+  height: 160px;
+  width: 160px;
+  display: block;
+  // margin: 0 auto;
+  margin-left: 15px;
+  // position: absolute;
+ 
+}
+#jutiye .rightk .xqb ul li  .zhushi{
+  width: 190px;
+  height: 69px;
+  position: absolute;
+  display: block;
+  top: 190px;
+}
+#jutiye .rightk .xqb ul li .zhushi a{
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 20px;
+  // text-align: center;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  display: block;
+  height: 15px;
+  font-weight: normal;
+}
+#jutiye .rightk .xqb ul li .zhushi p{
+margin-top: 10px;
+}
+#jutiye .rightk .xqb ul li .zhushi span{
+display: block;
+font-size: 16px;
+color: red;
+margin-top: 10px;
+}
+
+#dibu img{
+  width: 100%;
+  height: 100%;
+}
+
 
