@@ -298,19 +298,209 @@ color: black;
 }
 .com_list .fanwei{
   float: right;
+  margin-top: 15px;
 }
-.com_list .divq .fanwei .fan1,.fan2{
+.fan1 , .fan2{
+  text-align: center;
   width: 64px;
   height: 28px;
   border: 1px solid #b3b3b3;
   display: block;
-  padding-left: 10px;
-  margin-top: 15pxpx;
+ margin-left: 10px;
+  float: left;
   font-size: 14px;
   color: #000000;
+  
 }
+.fanwei span {
+ float: left;
+ color:black;
+ line-height:26px ;
+ margin-left: 10px;
 
+}
+.fanwei .sure{
+float: left;
+margin-left: 10px;
+width: 65px;
+height: 30px;
+color: white;
+background: red;
+border: 0px ;
 
+}
+.fenlei{
+  width: 1226px;
+  /* height: 1319px; */
+  display: block;
+  margin: 0 auto;
+  /* background: red; */
+  margin-top: 50px;
+}
+.fenlei .chears{
+  width: 200px;
+  height: 48px;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 48px;
+  font-size: 16px;
+  color: #333333;
+  background: #f1f1f1;
+}
+.fenlei .paixu{
+  width: 1000px;
+  height: 46px;
+  display: block;
+  margin-left: 15px;
+  background: #efefef;
+  float: right;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+}
+.fenlei .paixu ul{
+  float: left;
+  overflow: hidden;
+} 
+.fenlei .paixu ul li{
+  height: 45px;
+  width: 110px;
+  text-align: center;
+  line-height: 45px;
+  float: left;
+  color: #666;
+  border-right: 1px solid #e6e6e6;
+  /* position: relative; */
+  cursor: pointer;
+}
+.fenlei .paixu .hashuo{
+  float: left;
+  background: url(https://images.changhong.com/chgw/images/pro-result-store_06.png) no-repeat left center;
+  margin-left: 10px;
+}
+.fenlei .paixu .hashuo #radios{
+  display: block;
+  width: 16px;
+  height: 16px;
+  float: left;
+  opacity: 0;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.fenlei .paixu .hashuo p{
+  margin-left: 24px;
+  font-size: 14px;
+  color: #595959;
+  line-height: 45px;
+}
+.fenlei .paixu .chaxun{
+  margin-top: 7px;
+  overflow: hidden;
+  float: right;
+  margin-right: 18px;
+}
+.fenlei .paixu .chaxun #seici{
+  width: 150px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #a9a9a9;
+  line-height: 33px;
+}
+.lieb{
+  width: 1016px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 210px;
+  min-height: 300px;
+  display: block;
+  /* background: green; */
+}
+.lieb ul li{
+  width: 240px;
+  height: 360px;
+  background: greenyellow;
+  margin-left: 14px;
+  margin-top: 14px;
+  display: block;
+  float: left;
+}
+.fenye{
+  width: 1001px;
+  height: 60px;
+  margin-top: 10px;
+  display: block;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+  float: right;
+  
+}
+.fenye .flwy{
+  width: 674px;
+  height: 41px;
+  display: block;
+  float: right;
+  overflow: hidden;
+  color: #666;
+  background: #ffffff;
+  margin-top: 19px;
+}
+.fenye .flwy a:nth-of-type(1){
+  float: left;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+}
+.fenye .flwy .leftb{
+  display: block;
+  float: left;
+  padding: 0px 8px;
+  margin-right: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+}
+.fenye .flwy .leftb span{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 8px solid #666666;
+  border-bottom: 7px solid transparent;
+  margin: 5px 0px;
+}
+.fenye .flwy .yejiao a{
+  height: 22px;
+  line-height: 24px;
+  border: 1px solid #cccccc;
+  display: block;
+  float: left;
+  padding: 0px 8px;
+  margin-right: 16px;
+  font-size: 14px;
+}
+.fenye .flwy .yejiao a:nth-of-type(1){
+  border: 1px solid #e22421;
+  color: #ffffff;
+  background: #e22421;
+}
+/* .fenye .flwy .rightb span{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 8px solid #666666;
+  border-bottom: 7px solid transparent;
+  margin: 5px 0px;
+}
+.fenye .flwy .lastye{
+  display: block;
+  float: left;
+  padding: 0px 8px;
+  margin-right: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+} */
 
 
 

@@ -194,16 +194,21 @@
 }
 
 /* 导航隐藏物品 */
-#ycwp {
+#ycny{
   height: 229px;
   background: #ffffff;
   border-top: 1px solid #eeeeee;
   position: relative;
   width: 100%;
   display: none;
+  overflow: hidden;
+  z-index: 9;
 }
+/* #ycny .ycwp{
+  display: none;
+} */
 
-#ycwp .rmtj {
+#ycny .ycwp .rmtj {
   width: 64px;
   height: 229px;
   font-size: 16px;
@@ -214,14 +219,14 @@
   left: 100px;
 }
 
-#ycwp .wuping {
+#ycny .ycwp .wuping {
   display: block;
   position: absolute;
   left: 250px;
   top: 30px;
 }
 
-#ycwp ul li {
+#ycny .ycwp ul li {
   display: block;
   margin: 0 40px;
   float: left;
