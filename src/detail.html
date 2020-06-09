@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <link rel="stylesheet" href="http://localhost/js2002/xiangmu/src/css/common.css">
+    <link rel="stylesheet" href="http://localhost/js2002/xiangmu/src/css/detail.css">
+</head>
+
+<body>
+    <div class="goodsinfo">
+        <div class="box">
+            <a href="cart.html" target="_blank">进入购物车</a>
+        </div>
+        <div class="wrap">
+            <div id="spic">
+                <img src="" alt="" id="smallpic">
+                <div id="sf"></div>
+            </div>
+            <!-- 呗放大的图片（有边） -->
+            <div id="bf">
+                <img src="" alt="" id="bpic">
+            </div>
+            <div id="ulist">
+                <a href="javascript:;" id="left">&lt;</a>
+                <div id="list">
+                    <ul>
+
+                    </ul>
+                </div>
+                <a href="javascript:;" id="right">&gt;</a>
+            </div>
+        </div>
+        <div class="goodsinfo-word">
+            <div class="p-name">
+
+                <!-- 文本内容 -->
+                <a class="loadtitle" href="##"></a>
+            </div>
+            <div class="where">
+                <span>配送地址：</span>
+                <form action="#">
+                    <!--省份选择-->
+                    <select id="prov">
+                        <option>省份</option>
+                    </select>
+            
+                    <!--城市选择-->
+                    <select id="city">
+                        <option>城市</option>
+                    </select>
+            
+                    <!--县区选择-->
+                    <select id="country">
+                        <option>县区</option>
+                    </select>
+                </form>
+            <!-- 价格 -->
+            <div class="p-price"><strong><em>￥</em><i class="loadpcp"></i></strong></div>
+            <div class="p-btn">
+                <input type="text" id="count" value="1" />
+                <a href="javascript:;">加入购物车</a>
+                <!-- void(0) -->
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="thirdplugins/jquery.cookie.js"></script>
+<script src="http://localhost/js2002/xiangmu/src/script/detail.js"></script>
+</html>

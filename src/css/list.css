@@ -413,12 +413,10 @@ border: 0px ;
   margin-left: 210px;
   min-height: 300px;
   display: block;
-  /* background: green; */
 }
 .lieb ul li{
   width: 240px;
   height: 360px;
-  background: greenyellow;
   margin-left: 14px;
   margin-top: 14px;
   display: block;
@@ -483,7 +481,7 @@ border: 0px ;
   color: #ffffff;
   background: #e22421;
 }
-/* .fenye .flwy .rightb span{
+.fenye .flwy .rightb span{
   display: block;
   width: 0;
   height: 0;
@@ -492,7 +490,7 @@ border: 0px ;
   border-bottom: 7px solid transparent;
   margin: 5px 0px;
 }
-.fenye .flwy .lastye{
+/* .fenye .flwy .lastye{
   display: block;
   float: left;
   padding: 0px 8px;
@@ -501,6 +499,7 @@ border: 0px ;
   line-height: 24px;
   color: #666666;
 } */
+
 
 
 

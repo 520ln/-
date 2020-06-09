@@ -96,7 +96,7 @@
             $.each(data,function (index,value){
                 $strhtml +=`
                     <li>
-                    <a href="detail.html?sid=${value.sid}" target="_blank">
+                    <a href="list.html?sid=${value.sid}" target="_blank">
                     <img class="lazy"
                     data-original = "${value.url}"
                     width="160" height="160"/>
