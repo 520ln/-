@@ -97,10 +97,13 @@
     let $num = 6; //列表显示的图片个数
     $right.on('click', function() {
         let $lists = $('#list ul li');
-        if ($lists.size() > $num) { //限制点击的条件
+        console.log($lists.length);
+        if ($lists.length > $num) { //限制点击的条件
             $num++;
+           
+            
             $left.css('color', '#333');
-            if ($lists.size() == $num) {
+            if ($lists.length == $num) {
                 $right.css('color', '#fff');
             }
             $('#list ul').animate({
@@ -172,7 +175,77 @@
         alert('按钮触发了');
     });
 
-
-
-
 }(jQuery);
+
+
+
+// 地域三级联动
+!(function ($) {
+    let $btn = $('.btn');
+    let $show = $('#show');
+    let $prov = $('#prov');
+    let $city = $('#city');
+    let $country = $('#country');
+    let $dataAll, $provIndex, $cityIndex, $countryIndex
+    $.getJSON('../city.json', function (data) {
+        let $data = {
+            prov: '',
+            city: '',
+            country: ''
+        }
+        //1.获取json数据
+        $data.prov = data;
+        console.log($data.prov);
+        //2.禁止高亮
+        $btn.prop('disabled', true);
+        //3.获取省份信息
+        $.each($data.prov, function (index, value) {
+            $prov.append('<option value="' + index + '">' + value.name + '</option>');
+        })
+        //4.改变省份内容，获取点击的索引
+        $prov.on('change', function () {
+            $show.val('');
+            $btn.prop('disabled', true);
+            $('#city > option').first().nextAll().remove();
+            $('#country > option').first().nextAll().remove();
+            //find(expr|obj|ele):找出正在处理的元素的后代元素的好方法
+            $provIndex = $(this).find('option:selected').val();
+            if ($provIndex !== '=请选择省份=') {
+                $data.city = $data.prov[$provIndex].city;
+                $.each($data.city, function (index, value) {
+                    $city.append('<option value="' + index + '">' + value.name + '</option>');
+                })
+            }
+        })
+        $city.on('change', function () {
+            $show.val('');
+            $btn.prop('disabled', true);
+            $('#country > option').first().nextAll().remove();
+            //find(expr|obj|ele):找出正在处理的元素的后代元素的好方法
+            $cityIndex = $(this).find('option:selected').val();
+            if ($cityIndex !== '=请选择市区=') {
+                $data.country = $data.city[$cityIndex].districtAndCounty;
+                $.each($data.country, function (index, value) {
+                    $country.append('<option value="' + index + '">' + value + '</option>');
+                })
+            }
+        })
+        $country.on('change', function () {
+            $show.val('');
+            $countryIndex = $(this).find('option:selected').val();
+            if ($data.prov && $data.city && $data.country) {
+                click();
+            }
+        })
+        function click() {
+            if ($provIndex !== '=请选择省份=' && $cityIndex !== '=请选择市区=' && $countryIndex !== '=请选择县或区=') {
+                $btn.prop('disabled', false);
+                $btn.on('click', function () {
+                    $show.val($data.prov[$provIndex].name + '-' + $data.city[$cityIndex].name + '-' + $data.country[$countryIndex]);
+                })
+            } else {
+                $btn.prop('disabled', true);
+            }
+        }
+    })
+})(jQuery)
