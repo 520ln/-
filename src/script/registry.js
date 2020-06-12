@@ -4,7 +4,7 @@
     const $username = $('#username');
     const $password = $('.passnum');
     // const $repass = $('.repass');
-    const $email = $('.email');
+    // const $email = $('.email');
     const $span = $('span'); //多个
 
     //每一个表单一个标记。
@@ -12,11 +12,11 @@
     let passflag = true;
 
     //1.用户名
-    $username.on('focus', function() {
+    /* $username.on('focus', function() {
         $span.eq(0).html('设置后不可更改，中英文均可，最长14个英文或7个汉字').css({
             color: '#ccc'
         });
-    });
+    }); */
 
     $username.on('blur', function() {
         if ($(this).val() !== '') { //有值
@@ -52,11 +52,11 @@
     });
 
     //密码
-    $password.on('focus', function() {
+    /* $password.on('focus', function() {
         $span.eq(1).html('长度为8~14个字符,至少包含2种字符').css({
             color: '#ccc'
         });
-    });
+    }); */
 
     $password.on('input', function() {
         let $pass = $(this).val();
@@ -87,7 +87,7 @@
 
             switch ($count) {
                 case 1:
-                    $span.eq(1).html('弱').css({
+                    $span.eq(2).html('弱').css({
                         color: 'red'
                     });
                     passflag = false;
@@ -95,13 +95,13 @@
 
                 case 2:
                 case 3:
-                    $span.eq(1).html('中').css({
+                    $span.eq(2).html('中').css({
                         color: 'yellow'
                     });
                     passflag = true;
                     break;
                 case 4:
-                    $span.eq(1).html('强').css({
+                    $span.eq(2).html('强').css({
                         color: 'green'
                     });
                     passflag = true;
@@ -109,7 +109,7 @@
             }
 
         } else {
-            $span.eq(1).html('密码长度错误').css({
+            $span.eq(2).html('密码长度错误').css({
                 color: 'red'
             });
             passflag = false;
@@ -125,7 +125,7 @@
                 passflag = true;
             }
         } else {
-            $span.eq(1).html('密码不能为空').css({
+            $span.eq(2).html('密码不能为空').css({
                 color: 'red'
             });
             passflag = false;
