@@ -1,25 +1,16 @@
 !function ($) {
-    const $btns = $('.content .tab');
-    const $item = $('.content .item');
-    $btns.on('click', function () {
-        $(this).addClass('active').siblings('.content .tab').removeClass('active');
-        $item.eq($(this).index()).show().siblings('.content .item').hide();
-    });
-}(jQuery)
-
-
-!function ($) {
-    $('.btn').on('click', function () {
+    let $btn = $('.loginBtnTopDiv')
+    $btn.on('click', function () {
         $.ajax({
             type: 'post',
-            url: 'http://localhost/js2002/Day%2019_1_projectname/php/login.php',
+            url: 'http://localhost/js2002/xiangmu/php/login.php',
             data: {
-                user: $('.username').val(),
-                pass: hex_sha1($('.password').val())
+                username: $('.username').val(),
+                password: ($('.password').val())
             }
         }).done(function (result) {
             if (result) {
-                location.href = "index.html";
+                location.href = "http://localhost/js2002/xiangmu/src/index.html";
                 localStorage.setItem('username', $('.username').val());
             } else {
                 $('.password').val('');

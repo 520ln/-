@@ -252,6 +252,28 @@ width: 100%;
 height: 100%;
 margin-top: 70px;
 }
-
+.decide{
+    position: absolute;
+    top: 235px;
+    left: 42%;
+    z-index: 19;
+    width: 400px;
+}
+.decide span{
+    position: absolute;
+    box-sizing: border-box;
+    text-align: center;
+}
+body .decide span:nth-child(2){
+    top: 75px;
+}
+body .decide span:nth-child(3){
+    top: 155px;
+}
+body .decide span:nth-child(4){
+    top: 230px;
+}body .decide span:nth-child(5){
+    top: 310px;
+}
     
 

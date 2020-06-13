@@ -50,42 +50,37 @@
 
     
     <!-- 注册主体内容 -->
-    <form id="main" action="http://localhost/js2002/xiangmu/php/registry.php" method="post">
+    <div class="decide">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <form id="main" action="http://localhost/js2002/xiangmu/php/registry.php" method="POST">
         <div class="phonenb">
             <p class="same">用户名</p>
-            <input type="text" name="usermane" id="username" maxlength="11" placeholder="请输入用户名" class="phonenum"><span></span>
+            <input type="text" name="username" id="username" maxlength="11" placeholder="请输入用户名" class="phonenum"><span></span>
         </div>
         <div class="passnb">
             <p class="same">设置密码</p>
             <input type="password" name="password" id="" placeholder="请输入密码" class="passnum"><span></span>
-            <p class="zhushi">长度在8~16之间，必须包含字母和数字</p>
         </div>
         <div class="passure">
             <p class="same">确认密码</p>
-            <input type="password" name="password" id="" placeholder="请输入密码" class="passnum"><span></span>
+            <input type="password" name="repass" id="" placeholder="请输入密码" class="passnum"><span></span>
         </div>
-        <!-- <div class="picnb">
-            <p class="same">图形验证</p>
-            <input type="text" name="" id="" placeholder="请输入四位验证码" class="picsize">
-            <img src="https://cn.changhong.com/sso/register_code.do" alt="" class="picyz">
-            <span>
-                看不清<br>
-                换一张
-            </span>
-        </div> -->
         <div class="mean">
             <p class="same">用户邮箱</p>
-            <input type="text" name="" id="" class="meansize" placeholder="请输入邮箱号">
-            <!-- <p class="disu">获取验证码</p> -->
+            <input type="text" name="email" id="" class="meansize" placeholder="请输入邮箱号">
         </div>
-        <!-- <p class="tixing">每个手机号每天只能获取五次验证码</p> -->
         <div class="agree">
             <input type="checkbox" id="checkbox" checked="checked" />
             <p class="agreement" style="width: 350px;">我已阅读并接受 <a
                     href="https://cdn.chiq-cloud.com/passport/user-se.html">版权声明</a> 和 <a
                     href="https://cdn.chiq-cloud.com/passport/user-de.html">隐私保护</a> 条款</p>
         </div>
-        <input type="submit" class="zhuce" value="注册" />
+        <input type="submit" class="zhuce" name="submit" value="注册" />
         <p class="denglu"><a href="http://localhost/js2002/xiangmu/src/login.html">已有账号，马上登录</a></p>
     </form>
     <div id="dibu">

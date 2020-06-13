@@ -1,171 +1,224 @@
-! function($) {
-    //如何阻止提交按钮 onsubmit
-    const $form = $('form');
-    const $username = $('#username');
-    const $password = $('.passnum');
-    // const $repass = $('.repass');
-    // const $email = $('.email');
-    const $span = $('span'); //多个
+!function ($) {
+    const $form = $('form')
+    const $username = $('.phonenum')
+    const $password = $('.passnb input')
+    const $repassword = $('.passure input')
+    const $email = $('.meansize')
+    const $check = $('.agree input')
+    const $decide = $('.decide span')
 
-    //每一个表单一个标记。
-    let userflag = true; //标记
-    let passflag = true;
 
-    //1.用户名
-    /* $username.on('focus', function() {
-        $span.eq(0).html('设置后不可更改，中英文均可，最长14个英文或7个汉字').css({
-            color: '#ccc'
-        });
-    }); */
-
-    $username.on('blur', function() {
-        if ($(this).val() !== '') { //有值
-            let len = $(this).val().replace(/[\u4e00-\u9fa5]/g, 'aa').length; //将中文转换成两个英文计算长度
-            if (len < 14) {
-                $.ajax({
-                    type: 'post',
-                    url: 'http://localhost/NZ_1903/nz1903item/php/registry.php',
-                    data: {
-                        username: $username.val()
-                    }
-                }).done(function(result) {
-                    if (!result) { //不存在
-                        $span.eq(0).html('√').css('color', 'green');
-                        $userflag = true;
-                    } else {
-                        $span.eq(0).html('该用户名已经存在').css('color', 'red');
-                        $userflag = false;
-                    }
-                })
-            } else {
-                $span.eq(0).html('该用户名长度有问题').css({
-                    color: 'red'
+    let $userbool = true
+    let $passbool = true
+    let $repassbool = true
+    let $emailbool = true
+    let $checkbool = true
+    // 用户名
+    $username.on("focus", function () {//获得焦点显示文字
+        $decide.eq(0).html('最长为8个汉字或16个英文字母').css({
+            color: "#666666"
+        })
+    })
+    $username.on("blur", function () {
+        // 验证唯一性
+        if ($username.val() !== "") {
+            let $size = $username.val().replace(/[\u4e00-\u9fa5]/g, 'ab').length
+            if ($size < 16) {
+                $.post('http://localhost/js2002/xiangmu/php/registry.php', { username: $username.val() },
+                    function (data) {
+                        if (data) {
+                            $userbool = false
+                            $decide.eq(0).html("用户名已存在").css({
+                                color: "red"
+                            })
+                        } else {
+                            $userbool = true
+                            $decide.eq(0).html("√").css({
+                                color: "#22bb55"
+                            })
+                        }
+                    })
+            } else {//验证长度
+                $decide.eq(0).html('用户名长度有问题').css({
+                    color: 'red',
                 });
-                userflag = false;
+                $userbool = false
             }
-        } else {
-            $span.eq(0).html('该用户名不能为空').css({
+
+        } else {//空值验证
+            $userbool = false
+            $decide.eq(0).html('用户名不能为空').css({
                 color: 'red'
             });
-            userflag = false;
         }
-    });
+    })
 
-    //密码
-    /* $password.on('focus', function() {
-        $span.eq(1).html('长度为8~14个字符,至少包含2种字符').css({
-            color: '#ccc'
+
+    $password.on('focus', function () {//获得焦点
+        $decide.eq(1).html('长度为8~16个字符,需要包含数字，大小写字母，特殊符号中的两种字符').css({
+            color: "#666666"
         });
-    }); */
-
-    $password.on('input', function() {
-        let $pass = $(this).val();
-        if ($pass.length >= 8 && $pass.length <= 14) {
-            let regnum = /\d+/;
-            let regupper = /[A-Z]+/;
-            let reglower = /[a-z]+/;
-            let regother = /[\W\_]+/; //其他字符
-
-            //test():匹配存在感
-            let $count = 0; //计数
-
-            if (regnum.test($pass)) {
-                $count++;
-            }
-
-            if (regupper.test($pass)) {
-                $count++;
-            }
-
-            if (reglower.test($pass)) {
-                $count++;
-            }
-
-            if (regother.test($pass)) {
-                $count++;
-            }
-
-            switch ($count) {
+    });
+    $password.on('input', function () {
+        // 密码强度验证
+        let $passVal = $(this).val();
+        if ($passVal.length >= 8 && $passVal.length <= 16) {
+            let $passNum = /\d+/;
+            let $passCaps = /[A-Z]+/;
+            let $passlower = /[a-z]+/;
+            let $passSymbol = /[\W\_]+/;
+            let $num = 0;
+            if ($passNum.test($passVal)) $num++;
+            if ($passCaps.test($passVal)) $num++;
+            if ($passlower.test($passVal)) $num++;
+            if ($passSymbol.test($passVal)) $num++;
+            switch ($num) {
                 case 1:
-                    $span.eq(2).html('弱').css({
+                    $decide.eq(1).html('弱').css({
                         color: 'red'
                     });
-                    passflag = false;
+                    $passbool = false;
                     break;
-
                 case 2:
                 case 3:
-                    $span.eq(2).html('中').css({
-                        color: 'yellow'
+                    $decide.eq(1).html('中').css({
+                        color: 'orange'
                     });
-                    passflag = true;
+                    $passbool = true;
                     break;
                 case 4:
-                    $span.eq(2).html('强').css({
+                    $decide.eq(1).html('强').css({
                         color: 'green'
                     });
-                    passflag = true;
+                    $passbool = true;
                     break;
             }
-
+            // 密码长度验证
         } else {
-            $span.eq(2).html('密码长度错误').css({
+            $decide.eq(1).html('密码长度错误').css({
                 color: 'red'
             });
-            passflag = false;
+            $passbool = false;
         }
     });
-
-    $password.on('blur', function() {
+    // 空值验证
+    $password.on('blur', function () {
         if ($(this).val() !== '') {
-            if (passflag) {
-                $span.eq(1).html('√').css({
-                    color: 'green'
+            if ($passbool) {
+                $decide.eq(1).html('√').css({
+                    color: '#22bb55'
                 });
-                passflag = true;
+                $passbool = true;
             }
         } else {
-            $span.eq(2).html('密码不能为空').css({
+            $decide.eq(1).html('密码不能为空').css({
                 color: 'red'
             });
-            passflag = false;
+            $passbool = false;
         }
     });
 
-    $form.on('submit', function() {
-        if ($username.val() === '') {
-            $span.eq(0).html('该用户名不能为空').css({
+
+    // repass验证
+    $repassword.on('blur', function () {
+        if ($(this).val() !== '') {
+            if ($(this).val() === $password.val()) {
+                $decide.eq(2).html('√').css({
+                    color: '#22bb55'
+                });
+                $repassbool = true;
+            }else{
+                $decide.eq(2).html('两次密码不一致').css({
+                    color: 'red'
+                });
+                $repassbool = false;
+            }
+        } else {
+            $decide.eq(2).html('确认密码不能为空').css({
                 color: 'red'
             });
-            userflag = false;
+            $repassbool = false;
+        }
+    });
+    $repassword.on('focus', function () {//获得焦点
+        $decide.eq(2).html('长度为8~16个字符,需要包含数字，大小写字母，特殊符号中的两种字符').css({
+            color: "#666666"
+        });
+    });
+
+    // 邮箱验证
+    $email.on('focus', function () {//获得焦点
+        $decide.eq(3).html('您可以通过该邮箱登录或找回密码').css({
+            color: "#666666",
+        });
+    });
+    $email.on("blur", function () {
+        //验证邮箱格式是否正确
+        if ($email.val() !== "") {
+            let $emailVal = /^(\w+[\+\-\.]*\w+)\@(\w+[\-\.]*\w+)\.(\w+[\-\.]*\w+)$/
+            if ($emailVal.test($email.val())) {
+                $emailbool = true
+                $decide.eq(3).html("√").css({
+                    color: "#22bb55"
+                })
+            } else {//验证邮箱格式是否正确
+                $decide.eq(3).html('您的邮箱格式有问题').css({
+                    color: 'red',
+                });
+                $emailbool = false
+            }
+
+        } else {//空值验证
+            $emailbool = false
+            $decide.eq(3).html('邮箱不能为空').css({
+                color: 'red'
+            });
+        }
+    })
+
+
+    $form.on('submit', function () {
+        if ($username.val() === '') {
+            $decide.eq(0).html('用户名不能为空').css({
+                color: 'red'
+            });
+            $userbool = false;
         }
 
         if ($password.val() === '') {
-            $span.eq(1).html('密码不能为空').css({
+            $decide.eq(1).html('密码不能为空').css({
                 color: 'red'
             });
-            passflag = false;
+            $passbool = false;
         }
-        //阻止跳转：DOM 0级事件 return false   DOM 2级  event.perventDefault() / event.returnValue = false
-        if (!userflag || !passflag) {
+        if ($repassword.val() === '') {
+            $decide.eq(2).html('确认密码不能为空').css({
+                color: 'red'
+            });
+            $repassbool = false;
+        }
+        if ($email.val() === '') {
+            $decide.eq(3).html('邮箱不能为空').css({
+                color: 'red'
+            });
+            $emailbool = false;
+        }
+        // 判断I agree是否选中
+        if ($check.prop('checked') === false) {
+            $checkbool = false
+            $decide.eq(4).html('您需要同意用户协议方可正常注册').css({
+                color: 'red'
+            });
+        } else {
+            $checkbool = true
+            $decide.eq(4).html('')
+        }
+        //全部不为空时才可以提交
+        if (!$userbool || !$passbool || !$emailbool || !$checkbool || !$repassbool) {
             return false;
         }
-
     });
 
 
 
-    //手机号码：
-    let tel = /^1[345678]\d{9}$/;
-    // console.log(tel.test('13456789564'));
-
-
-    //电子邮箱：
-    let email = /^(\w+[\+\-\.]*\w+)\@(\w+[\-\.]*\w+)\.(\w+[\-\.]*\w+)$/; //学习转义字符
-    console.log(email.test('75480420@qq.com'));
-
-
-    //身份证号：\d{17}(\d|X|x)
-    let cartid = /^\d{6}(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])\d{3}[x|X|\d]$/;
-    console.log(cartid.test('123456198812251234'));
-}(jQuery);
+}(jQuery)
